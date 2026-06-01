@@ -2932,12 +2932,18 @@ a {
 
 .menu {
   z-index: 99999;
-  filter: invert();
+  filter: brightness(0) invert(1);
   cursor: pointer;
   width: 60px;
   margin-right: -17px;
   position: static;
   inset: 0% auto 0% 0%;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.menu:hover {
+  transform: scale(1.1);
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
 }
 
 .body-2 {
