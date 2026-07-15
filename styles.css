@@ -2055,15 +2055,15 @@ textarea.w-input, textarea.w-select {
 }
 
 :root {
-  --white: #0a0a0f;
-  --primary: #f8fafc;
-  --accent: #a855f7;
-  --accent-glow: rgba(168, 85, 247, 0.4);
-  --glass-bg: rgba(255, 255, 255, 0.02);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-border-hover: rgba(168, 85, 247, 0.3);
-  --text-muted: #cbd5e1;
-  --text-dim: #94a3b8;
+  --white: #f0f7ff;
+  --primary: #0f172a;
+  --accent: #0284c7;
+  --accent-glow: rgba(2, 132, 199, 0.2);
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(2, 132, 199, 0.15);
+  --glass-border-hover: rgba(2, 132, 199, 0.45);
+  --text-muted: #334155;
+  --text-dim: #475569;
 }
 
 .w-form-formrecaptcha {
@@ -2135,11 +2135,11 @@ a {
 }
 
 .grid-3-columns.border-bottom {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(2, 132, 199, 0.12);
 }
 
 .body-left-column {
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(2, 132, 199, 0.12);
 }
 
 .serif {
@@ -2162,32 +2162,31 @@ a {
 }
 
 .button {
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: none;
   color: #ffffff;
-  background-image: url("https://cdn.prod.website-files.com/5f00ac7516929863f832df2c/5f2b2397eedb569df7a47edf_Arrow%20Icon-5.svg"), linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+  background-image: url("https://cdn.prod.website-files.com/5f00ac7516929863f832df2c/5f2b2397eedb569df7a47edf_Arrow%20Icon-5.svg"), linear-gradient(135deg, #007aff 0%, #0056b3 100%);
   background-position: 80% 50%, 0% 0%;
   background-repeat: no-repeat, no-repeat;
-  background-size: auto 32px, 100% 100%;
-  padding: 16px 88px 16px 32px;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 8px;
-  transition: background-position 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.35);
+  background-size: auto 24px, 100% 100%;
+  padding: 14px 72px 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-position 0.25s ease, opacity 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.20);
   text-decoration: none;
   display: inline-block;
 }
 
 .button:hover {
-  background-position: 90% 50%, 0% 0%;
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5), 0 0 10px rgba(99, 102, 241, 0.2);
-  transform: translateY(-2px);
+  background-position: 85% 50%, 0% 0%;
+  box-shadow: 0 6px 16px rgba(0, 122, 255, 0.35);
+  transform: translateY(-1px);
 }
 
 .button:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 10px rgba(168, 85, 247, 0.4);
+  opacity: 0.7;
+  transform: scale(0.97) translateY(0);
 }
 
 .button.no-margin-right {
@@ -2260,7 +2259,7 @@ a {
 .card:hover {
   transform: translateY(-6px) scale(1.01);
   border-color: var(--glass-border-hover);
-  box-shadow: 0 12px 40px rgba(168, 85, 247, 0.15), 0 0 20px rgba(168, 85, 247, 0.05);
+  box-shadow: 0 12px 40px rgba(2, 132, 199, 0.12), 0 0 20px rgba(2, 132, 199, 0.05);
 }
 
 .card.text {
@@ -2340,7 +2339,7 @@ a {
 }
 
 .container.border-top {
-  border-top: 1px solid #000;
+  border-top: 1px solid rgba(2, 132, 199, 0.15);
 }
 
 .div-block {
@@ -2563,7 +2562,7 @@ a {
 }
 
 .div-block-19 {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(2, 132, 199, 0.12);
   justify-content: space-between;
   align-items: center;
   padding-top: 28px;
@@ -2643,7 +2642,7 @@ a {
 
 .text-link {
   color: var(--primary);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(2, 132, 199, 0.3);
   text-decoration: none;
   transition: border-color .1s, transform .1s;
   display: inline-block;
@@ -2765,24 +2764,25 @@ a {
 }
 
 .social-links {
-  opacity: .2;
-  color: #fff;
+  opacity: .6;
+  color: var(--primary);
   letter-spacing: 1.04px;
   text-transform: uppercase;
   margin-bottom: 23px;
   font-size: 13px;
   line-height: 130%;
   text-decoration: none;
-  transition: opacity .2s;
+  transition: opacity .2s, color .2s;
 }
 
 .social-links:hover {
   opacity: 1;
+  color: var(--accent);
 }
 
 .social-links.w--current {
-  opacity: .2;
-  color: #fff;
+  opacity: .6;
+  color: var(--primary);
   letter-spacing: 1.04px;
   text-transform: uppercase;
   margin-bottom: 23px;
@@ -2792,10 +2792,12 @@ a {
   font-weight: 700;
   line-height: 130%;
   text-decoration: none;
+  transition: opacity .2s, color .2s;
 }
 
 .social-links.w--current:hover {
   opacity: 1;
+  color: var(--accent);
 }
 
 .overlay {
@@ -2815,7 +2817,7 @@ a {
 
 .menu-bg {
   z-index: 8888;
-  background-color: rgba(10, 10, 15, 0.95);
+  background-color: rgba(240, 247, 255, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   display: block;
@@ -2857,14 +2859,14 @@ a {
 }
 
 .div-block-28 {
-  background-color: #c15bf3;
+  background-color: var(--accent);
   width: 16px;
   height: 2px;
   margin-bottom: 5px;
 }
 
 .nav-link {
-  color: #fff;
+  color: var(--primary);
   margin-bottom: 32px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -2874,6 +2876,7 @@ a {
   line-height: .8em;
   text-decoration: none;
   transition: color .2s, opacity .2s;
+  opacity: 0.75;
 }
 
 .nav-link:hover {
@@ -2884,6 +2887,7 @@ a {
 
 .nav-link.w--current {
   opacity: 1;
+  color: var(--accent);
 }
 
 .nav-link.about:hover {
@@ -2899,7 +2903,7 @@ a {
 }
 
 .nav-link.contact:hover {
-  color: #c3fc27;
+  color: #0284c7;
 }
 
 .image-3 {
@@ -2932,7 +2936,7 @@ a {
 
 .menu {
   z-index: 99999;
-  filter: brightness(0) invert(1);
+  filter: brightness(0) opacity(0.85);
   cursor: pointer;
   width: 60px;
   margin-right: -17px;
@@ -2943,7 +2947,7 @@ a {
 
 .menu:hover {
   transform: scale(1.1);
-  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+  filter: brightness(0) opacity(1) drop-shadow(0 0 8px rgba(2, 132, 199, 0.4));
 }
 
 .body-2 {
@@ -3068,7 +3072,7 @@ a {
 .div-block-30:hover {
   transform: translateY(-6px) scale(1.01);
   border-color: var(--glass-border-hover);
-  box-shadow: 0 12px 40px rgba(168, 85, 247, 0.15), 0 0 20px rgba(168, 85, 247, 0.05);
+  box-shadow: 0 12px 40px rgba(2, 132, 199, 0.12), 0 0 20px rgba(2, 132, 199, 0.05);
 }
 
 .div-block-30.copywriting {
@@ -3154,7 +3158,7 @@ a {
 }
 
 .divider {
-  background-color: var(--primary);
+  background-color: rgba(2, 132, 199, 0.15);
   width: 100%;
   height: 1px;
   margin-top: 128px;
